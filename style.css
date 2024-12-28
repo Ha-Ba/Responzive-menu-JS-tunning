@@ -10,7 +10,7 @@ header {
   flex-direction: row;
   align-items: center;
   background-color: #15304c;
-  height: 70x;
+  height: 70px;
 }
 .logo {
   flex-grow: 1;
@@ -48,4 +48,37 @@ header nav li a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+section div {
+  /* transition: 2.5s; */
+  margin: 0 30px 0 20px;
+  line-height: 1.5; 
+  -webkit-text-stroke: .3px rgb(209, 207, 207);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.welcome h2 {
+  padding: 50px 20px 10px 20px;
+  color: white;
+   -webkit-text-stroke: .5px  rgb(184, 112, 5);
+}
+
+/* Hover */
+nav a:hover {
+  color: rgb(117, 73, 6);
+  /* font-size: 1.1rem; */
+  transition: .2s;
+}
+
+div:hover {
+   color: rgb(100, 61, 2);
+   /* font-size: 1.5rem; */
+   transition: 1s;
+   -webkit-text-stroke: .5px  rgb(184, 112, 5);
+}
+h2:hover {
+   color: rgb(100, 61, 2);
+   font-size: 1.6rem;
+   transition: 1s;
+  -webkit-text-stroke:0%;
 }
