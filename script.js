@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector(".menu-icon");
 const menuList = document.querySelector("nav");
 const hamburgerIcon = document.querySelector(".fa-solid");
+const menuItems = menuList.querySelectorAll("li a");
 
 menuIcon.addEventListener("click", () => {
   if (hamburgerIcon.classList[1] === "fa-bars") {
@@ -14,12 +15,14 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-menuList.addEventListener("click", () => {
-  if (hamburgerIcon.classList[1] === "fa-xmark") {
-    hamburgerIcon.classList.remove("fa-xmark");
-    hamburgerIcon.classList.add("fa-bars");
-    menuList.style.display = "none";
-  } else {
-    return
-  }
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (hamburgerIcon.classList[1] === "fa-xmark") {
+      hamburgerIcon.classList.remove("fa-xmark");
+      hamburgerIcon.classList.add("fa-bars");
+      menuList.style.display = "none";
+    } else {
+      return;
+    }
+  });
 });
